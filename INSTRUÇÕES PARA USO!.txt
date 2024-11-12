@@ -1,0 +1,27 @@
+1- Baixar os dados de cada sensor e renomea-los para seus sensores correspondentes. ex: Sensor 1.xls, Sensor 2.xls
+
+2- Colocar todas as planilhas de sensores em uma pasta única.
+
+3- Executar o programa.
+
+4- Escolher Temperatura ou Umidade. (ESCOLHA APENAS 1 PARA NÃO BUGAR)
+
+5- Clicar em Selecionar planilhas e escolher a pasta em que você colocou todas as planilhas de sensores juntas.
+
+6- Colocar a Data em que o ponto foi calibrado no formato ANO-MES-DIA (SE NÃO FOR NESSE FORMATO NÃO FUNCIONA.)
+
+6- Colocar o inicio do horario do primeiro sensor do ponto a ser verificado no formato HORA:MINUTOS:SEGUNDOS (SE NÃO FOR NESSE FORMATO NÃO FUNCIONA.)
+
+7- Clicar em Criar para criar a planilha.
+
+8- Selecione a Pasta onde a Planilha vai ser Salva.
+
+9- Abra a Planilha Salva e Renomeie as colunas dos sensores para Ch 201 (C) Ch 202 (C) Ch 203 (C) Ch 204 (C) Ch 205
+(C) Ch 206 (C) Ch 207 (C) Ch 208 (C) Ch 209 (C) respectivamente.
+
+10- Formate a coluna de tempo do GERAL para HORA na Ferramenta "Número" no Excel (FICA EM BAIXO DE "AUTOMATIZAR")
+
+11- Formate a coluna dos sensores do GERAL para Número na Ferramenta "Número" no Excel (FICA EM BAIXO DE "AUTOMATIZAR")
+
+12- FIM, Sua planilha está pronta para ser lançada.
+
