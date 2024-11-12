@@ -1,7 +1,10 @@
-from tkinter import Tk
 import os
+from tkinter import Tk
+
 from view.interface_grafica import InterfaceGrafica
 
+# Verificar atualizações antes de iniciar o aplicativo
+os.system("python updater.py")
 
 
 # Função principal que inicia a interface gráfica

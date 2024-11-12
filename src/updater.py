@@ -6,18 +6,22 @@ import zipfile
 import requests
 
 # URLS do servidor
-VERSION_URL = "https://github.com/iMauricioAugusto/software_planilhas_datalog/blob/main/src/version.txt"  # Link para o arquivo version.txt no servidor
-DOWNLOAD_URL = "https://github.com/iMauricioAugusto/software_planilhas_datalog/blob/main/src/software_planilha_datalog.zip"  # Link para o arquivo zip do seu aplicativo
+VERSION_URL = "https://raw.githubusercontent.com/iMauricioAugusto/software_planilhas_datalog/refs/heads/main/src/version.txt"  # Link para o arquivo version.txt no servidor
+DOWNLOAD_URL = "https://github.com/iMauricioAugusto/software_planilhas_datalog/blob/main/software_planilha_datalog.zip"  # Link para o arquivo zip do seu aplicativo
 
 
 # Função para obter a versão atual do aplicativo
 def get_current_version():
     try:
-        with open("version.txt", "r") as file:
+        # Ajuste o caminho do version.txt, se necessário
+        current_dir = os.path.dirname(os.path.abspath(__file__))
+        version_path = os.path.join(current_dir, "version.txt")
+        with open(version_path, "r") as file:
             return file.read().strip()
+        print(file.read().strip())
     except FileNotFoundError:
+        print("Arquivo version.txt não encontrado.")
         return "0.0.0"
-
 
 # Função para obter a versão mais recente do servidor
 def get_latest_version():
@@ -29,8 +33,7 @@ def get_latest_version():
         print("Erro ao verificar a versão mais recente.")
         return None
 
-
-# Função para baixar a nova versão
+# # Função para baixar a nova versão
 def download_update():
     try:
         response = requests.get(DOWNLOAD_URL, stream=True)
@@ -67,6 +70,8 @@ def check_for_updates():
     print(f"Versão mais recente: {latest_version}")
 
     if current_version != latest_version:
+        print(f"Versão atual: {current_version}")
+        print(f"Versão mais recente: {latest_version}")
         print("Nova versão disponível! Atualizando...")
         if download_update():
             apply_update()
