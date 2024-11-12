@@ -1,6 +1,7 @@
 from tkinter import Tk
-
+import os
 from view.interface_grafica import InterfaceGrafica
+
 
 
 # Função principal que inicia a interface gráfica
