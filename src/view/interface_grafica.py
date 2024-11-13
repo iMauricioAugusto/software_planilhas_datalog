@@ -5,7 +5,6 @@ from tkinter import ttk
 from tkinter.filedialog import askdirectory, asksaveasfilename
 import tkinter as tk
 from tkinter import messagebox
-import configparser
 
 from models.planilhas import Planilha
 
